@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&family=Roboto+Slab&display=swap');
+:root{
+    --purple: #352b46;
+    --yellow: #FBC32F;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+/* Header*/
+
+.idiomes, nav, footer, .container{   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+header, nav{
+    background-color: var(--purple);
+    height: 5vh;
+    min-height: 50px;
+    border-bottom: 2px solid white;
+    color: white;
+    width: 100%;
+    justify-content: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    font-size: 1.20rem;
+    transition: top 0.3s;
+}
+
+nav p{
+    margin: 0 3vw;
+}
+
+nav:nth-child(2){
+    border: none;
+    min-height: 30px;
+}
+
+#navbar{
+    z-index: 3;
+}
+
+a{
+    color: white;
+    margin: 2vw;
+}
+
+/* MAINPAGE*/
+
+#mainPage{
+    height: 60vh;
+    width: 100%;
+    background-image: url("./fotos/platazos.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    margin: 30vh 0 15vh 0;
+    position: relative;
+}
+
+#mainPage div{
+    height: 15vh;
+    width: 50vw;
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 25vw;
+    margin-top: -8vh;
+}
+
+#mainPage div img{ width: 100%;}
+
+.container{
+    margin: auto;
+    margin-bottom: 10vh;
+    width: 80vw;
+    height: 50%;
+    justify-content: center;
+}
+
+.img{
+    width: 40%;
+    min-width: 350px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    margin: 0 30px;
+}
+
+.text{
+    max-width: 350px;
+}
+
+#salados{background-image: url("./fotos/background.jpg");}
+#dulces{background-image: url("./fotos/duuulce.jpg");}
+
+.container p{margin-bottom: 15px;}
+.container a{
+    color: black;
+    margin: 0;
+}
+
+
+/*FOOTER*/
+
+footer{
+    background-color: var(--purple);
+    width: 100%;
+    color: white;
+    font-weight: 50;
+}
+
+footer div{
+    margin-bottom: 2vh;
+}
+
+footer h3{
+    margin-top: 20px;
+    margin-bottom: 7px;
+    color: var(--yellow);
+}
+
+footer *{
+    line-height: 150%;
+}
+
+footer a{
+    margin: 0 1vh 0 0;
+}
+
+
+@media only screen and (max-width: 600px){
+    #mainPage div{width: 70vw; margin-left: 15vw;}
+    #mainPage div img{ width: 150%;}
+    .container, footer{flex-direction: column;}
+    .text{margin-top: 30px;}
+}
