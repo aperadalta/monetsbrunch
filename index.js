@@ -8,3 +8,43 @@ var currentScrollPos = window.pageYOffset;
   }
   prevScrollpos = currentScrollPos;
 }
+
+const lang = document.getElementById("lang");
+const ca = document.getElementsByClassName("CA");
+const es = document.getElementsByClassName("ES");
+
+
+[].forEach.call(ca, function (el) {
+  el.style.display = 'none';
+});
+
+const changeLanguage = language => {
+  lang.innerHTML = language;
+  let main;
+  let secondary;
+
+  if(language == "ES"){
+    main = ca;
+    secondary = es;
+  }else{
+    main = es;
+    secondary = ca;
+  } 
+  
+  [].forEach.call(main, function (el) {
+    el.style.display = 'none';
+  });
+  
+  [].forEach.call(secondary, function (el) {
+    el.style.display = 'block';
+  });
+}
+
+lang.addEventListener('click', ()=> {
+  console.log(lang.innerHTML)
+  if(lang.innerHTML == "ES"){
+    changeLanguage("CA");
+  }else{
+    changeLanguage("ES");
+  }
+});

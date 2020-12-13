@@ -9,11 +9,13 @@
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
 }
-
+html{
+    width: 100%;
+}
 
 /* Header*/
 a{text-decoration: none;}
-.idiomes, nav, footer, .container, #nomesM{   
+.idiomes, nav, footer, .container, #checkMenu{   
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -27,6 +29,19 @@ header, nav{
     color: white;
     width: 100%;
     justify-content: center;
+}
+
+#lang{
+    position: fixed;
+    top: 0;
+    background-color: rgb(19, 18, 18);
+    color: white;
+    padding: 8px 6px;
+    border-radius: 0 0 6px 6px;
+    left: 80vw;
+    z-index: 5;
+    border: none;
+    cursor: pointer;
 }
 
 header{
@@ -60,7 +75,7 @@ a{
 #mainPage{
     height: 60vh;
     width: 100%;
-    background-image: url("./fotos/platazos.jpg"); 
+    background-image: url("./fotos/IMG20201212121258.jpg"); 
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover; 
@@ -109,7 +124,7 @@ a{
 
 #salados{background-image: url("./fotos/background.jpg");}
 #dulces{background-image: url("./fotos/duuulce.jpg");}
-#nomesM{background-image: url("./fotos/platazos.jpg"); cursor: pointer; background-attachment: fixed;}
+#checkMenu{background-image: url("./fotos/platazos.jpg"); cursor: pointer; background-attachment: fixed;}
 
 .container p{margin-bottom: 15px;}
 .container a{
@@ -172,4 +187,5 @@ footer a{
     .container, footer{flex-direction: column;}
     .text{margin-top: 30px;}
     footer div{margin: 2vh 0 0 10vw; font-size: 0.9rem}
+    #lang{left: 87vw}
 }

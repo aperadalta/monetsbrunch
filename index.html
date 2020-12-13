@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body >
+    <!-- HEADER -->
     <header id="navbar">
-        <nav>
-            <a href="#mainPage">Inicio</a>
-            <p>Menú</p>
-            <p>Contacto</p> 
+        <nav >
+            <a href="#mainPage" class="ES">Inicio</a>
+            <p class="ES">Menú</p>
+            <p class="ES">Contacto</p> 
+
+            <a href="#mainPage" class="CA">Inici</a>
+            <p class="CA">Menú</p>
+            <p class="CA">Contacte</p> 
         </nav>
         <nav>
             <a target="_blank" href="https://www.instagram.com/monetsbrunch/"><i class="fa fa-instagram" ></i></a>
@@ -21,8 +26,9 @@
             <a target="_blank" href="https://www.instagram.com/monetsbrunch/"><i class="fa fa-tripadvisor" ></i></a>
             <a target="_blank" href="mailto:monetsbrunch@gmail.com"><i class="fa fa-envelope" ></i></a>
         </nav>
+        <div id="lang">ES</div>
     </header>
-
+    
     <div id="mainPage">
         <div>
             <img src="./fotos/logo png.png" alt="Logo of Monet's Brunch" id="logo" >
@@ -31,12 +37,12 @@
 
     <!-- PARTS OF THE MENU 1.SALADOS -->
     <div class="container">
-        <div class="imgbg img" id="salados" alt=""></div>
+        <div class="imgbg img" id="salados" alt="Los mejores brunch salados de El Vendrell"></div>
         <div class="text">
-            <h4>Salados</h4>
-            <p>Los mejores brunch salados de todo El Vendrell! Increibles sabores únicos gracias a unas recetas legendarias que han ido pasando de generación en generación.</p>
+            <h4 class="ES">Salados</h4><h4 class="CA">Salats</h4>
+            <p class="ES">Los mejores brunch salados de todo el Baix Penedès! Increibles sabores únicos gracias a unas recetas legendarias que han ido pasando de generación en generación.</p>
             <a target="_blank" href="https://www.instagram.com/monetsbrunch/">Menú<i class="fa fa-long-arrow-right" style=" transform: rotate(-45deg);"></i></a>
-            <a target="_blank" href="#gallery">Ver fotos<i class="fa fa-long-arrow-right" style=" transform: rotate(-45deg);"></i></a>
+            <a target="_blank" href="#gallery" class="ES">Ver fotos<i class="fa fa-long-arrow-right" style=" transform: rotate(-45deg);"></i></a>
         </div>
     </div>
 
@@ -44,11 +50,11 @@
     <div class="container">
         <div class="text">
             <h4>Dulces</h4>
-            <p>Los mejores brunch salados de todo El Vendrell! Increibles sabores únicos gracias a unas recetas legendarias que han ido pasando de generación en generación.</p>
+            <p>Los mejores brunch dulces de todo el Baix Penedès! Increibles sabores únicos gracias a unas recetas legendarias que han ido pasando de generación en generación.</p>
             <a target="_blank" href="https://www.instagram.com/monetsbrunch/">Menú<i class="fa fa-long-arrow-right" style=" transform: rotate(-45deg);"></i></a>
             <a target="_blank" href="#gallery">Ver fotos<i class="fa fa-long-arrow-right" style=" transform: rotate(-45deg);"></i></a>
         </div>
-        <div class="imgbg img" id="dulces" alt=""></div>
+        <div class="imgbg img" id="dulces" alt="Los mejores brunch dulces de El Vendrell"></div>
     </div>
 
     <!-- PARTS OF THE MENU 3. TOSTAS -->
@@ -74,7 +80,7 @@
     </div>
 
     <!-- CHECK THE MENU LAD -->
-    <div class="imgbg" id="nomesM" style="width: 100%; height: 400px; color: white; text-align: center;">
+    <div class="imgbg" id="checkMenu" style="width: 100%; height: 400px; color: white; text-align: center;">
         <h2>Veure el Menú<br><br><i class="fa fa fa-map-o" style="font-size: 2.48em;"></i></h2>   
     </div>
 
@@ -96,8 +102,8 @@
     
     <!-- CONTACT -->
     <div style="text-align: center; line-height: 200%;">
-        <h2>Visita nuestro brunch</h2><br>
-        <p >
+        <h2 class="ES">Visita nuestro brunch</h2><h2 class="CA">Visita el nostre brunch</h2><br>
+        <p class="ES">
                 Abrimos todas las mañanas y tardes, excepto los domingos.
             <br>Ven a disfrutar de nuestros brunchs y smoothies.
             <br>Te esperamos en <b> Monet's Brunch!</b>
@@ -107,12 +113,14 @@
     
     <div >
         <iframe 
+            style="margin-top: 4vh;"
             width="100%" 
             height="300" 
             frameborder="0" 
             scrolling="no" 
             marginheight="0" 
             marginwidth="0" 
+            alt="google maps"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=+(monets%20brunch)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
         </iframe>
     </div>
@@ -120,8 +128,8 @@
     <!-- FOOTER -->
     <footer>
         <div>
-            <h3>Horario</h3>
-            <p>De lunes a sabado:</p>
+            <h3 class="ES">Horario</h3><h3 class="CA">Horari</h3>
+            <p class="ES">De lunes a sabado:</p><p class="CA">De dilluns a dissabte:</p>
             <ul>
                 <li>De 9:00 h a 13:00 h</li>
                 <li>De 17:00 h a 20:00 h</li>
@@ -129,19 +137,19 @@
 
         </div>
         <div>
-            <h3>Contacta con nosotros</h3>
+            <h3 class="ES">Contacta con nosotros</h3><h3 class="CA">Contacta amb nosaltres</h3>
             <p><i class="fa fa-phone" ></i>  +34665407147</p>
             <a href="mailto:monetsbrunch@gmail.com"><i class="fa fa-envelope" ></i>   monetsbrunch@gmail.com</a>
         </div>
         <div>
-            <h3>Siguenos!</h3>
+            <h3 class="ES">Siguenos!</h3><h3 class="CA">Segueix-nos!</h3>
             <a target="_blank" href="https://www.instagram.com/monetsbrunch/"><i class="fa fa-instagram" ></i></a>
             <a target="_blank" href="https://www.instagram.com/monetsbrunch/"><i class="fa fa-facebook" ></i></a>
             <a target="_blank" href="https://www.instagram.com/monetsbrunch/"><i class="fa fa-tripadvisor" ></i></a>
             <a target="_blank" href="mailto:monetsbrunch@gmail.com"><i class="fa fa-envelope" ></i></a>
         </div>
         <div>
-            <h3>Dirección</h3>
+            <h3 class="ES">Dirección</h3><h3 class="CA">Direcció</h3>
             <p>Carrer de Jaume I, 9 </p>
             <p>43700 El Vendrell, Tarragona</p>
         </div>
