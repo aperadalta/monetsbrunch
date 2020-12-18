@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="css.css">
     <link rel="icon" href="./fotos/nomes M.JPG" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body >
+    <div id="startGallery"></div>
     <!-- HEADER -->
     <header id="navbar">
         <nav >
@@ -81,13 +83,18 @@
 
     <!-- CHECK THE MENU LAD -->
     <div class="imgbg" id="checkMenu" style="width: 100%; height: 400px; color: white; text-align: center;">
-        <h2>Veure el Menú<br><br><i class="fa fa fa-map-o" style="font-size: 2.48em;"></i></h2>   
+        <h2 class="CA" lang="ca">Veure el Menú<br><br><i class="fa fa fa-map-o" style="font-size: 2.48em;"></i></h2>
+        <h2 class="ES" lang="es">Ver el Menú<br><br><i class="fa fa fa-map-o" style="font-size: 2.48em;"></i></h2>   
     </div>
 
     <!-- GALLERY -->
+    <div class="appear" id="galeryBackground"></div>
+    <i class="fa fa-close appear"></i>
+    <i class="fa fa-angle-left appear"></i>
+    <h2 style="text-align: center; margin-top: 150px;" class="disappear">Galeria</h2>
     <div class="gallery" id="gallery">
-        <h3 style="text-align: center; margin-top: 70px;">Galeria</h3>
-        <img src="" alt="">
+        <img src="./fotos/IMG20201212121258.jpg" alt="">
+        <img src="" alt=""></img>
         <img src="" alt="">
         <img src="" alt="">
         <img src="" alt="">
@@ -99,6 +106,8 @@
         <img src="" alt="">
         <img src="" alt="">
     </div>
+    <i class="fa fa-angle-right appear"></i>
+    
     
     <!-- CONTACT -->
     <div style="text-align: center; line-height: 200%;">
@@ -121,7 +130,7 @@
             marginheight="0" 
             marginwidth="0" 
             alt="google maps"
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=+(monets%20brunch)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.0575243154194!2d1.5332858152841407!3d41.22051687927992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a38b7f3d6959f5%3A0x5eeff86ef74e7d26!2sMonet&#39;s%20Brunch!5e0!3m2!1sca!2ses!4v1608142082969!5m2!1sca!2ses">
         </iframe>
     </div>
     
