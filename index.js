@@ -71,17 +71,24 @@ const appear = () =>{
 const disappear = () =>{
     $('.gallery').removeAttr('id');
     $('.gallery').attr('id', 'gallery');
-    $('.fa').css('display', 'none');
     $('.appear').css('display', 'none');
     $('.disappear').css('display', 'block');
 }
 
+var width = 35;
+
 const moveLeft = () => {
-  $('#wholeGallery').css('left', '105vw'); //this worked, animate
+  width += 71;
+  $('#wholeGallery').animate({
+    left: `${width}vw`
+  })
 }
 
 const moveRight = () => {
-  
+  width -= 71;
+  $('#wholeGallery').animate({
+    left: `${width}vw`
+  })
 }
 
 $('.appear').css('display', 'none');
