@@ -75,21 +75,41 @@ const disappear = () =>{
     $('.disappear').css('display', 'block');
 }
 
-var width = 35;
+var width = 35,
+    moveWidth = 71,
+    maxWidth = (($("#gallery img").length-2)*moveWidth)/2;
+
+    console.log(width + " " + maxWidth);
+
+
+// Right = dreta (width resta)
+// Left = esquerra (width suma)
 
 const moveLeft = () => {
-  width += 71;
+  width += moveWidth;
   $('#wholeGallery').animate({
     left: `${width}vw`
   })
 }
 
 const moveRight = () => {
-  width -= 71;
+  width -= moveWidth;
   $('#wholeGallery').animate({
     left: `${width}vw`
   })
 }
+
+$('.fa-close').click(()=> disappear());
+
+$('.fa-angle-left').click(function () {
+    if(width < maxWidth) moveLeft();
+});
+
+$('.fa-angle-right').click(function () {
+  console.log(width + " " + maxWidth);
+  if(width > maxWidth - (maxWidth*2)) moveRight();
+});
+
 
 $('.appear').css('display', 'none');
 
@@ -101,16 +121,6 @@ document.addEventListener('keydown', function(event){
 	if(event.key === "Escape"){
 		disappear();
 	}
-});
-
-$('.fa-close').click(()=> disappear());
-
-$('.fa-angle-left').click(function () {
-   moveLeft();
-});
-
-$('.fa-angle-right').click(function () {
-   moveRight();
 });
 
 /*
