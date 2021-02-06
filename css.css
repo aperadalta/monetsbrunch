@@ -73,10 +73,22 @@ a{
 
 /* MAINPAGE*/
 
+#nosaltres{
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+#description{
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto 60px auto;
+}
+
 #mainPage{
     height: 60vh;
     width: 100%;
-    background-image: url("./fotos/IMG20201212121258.jpg"); 
+    background-image: url("./fotos/tostadas.jpg"); 
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover; 
@@ -139,15 +151,22 @@ a{
     margin: 0;
 }
 
+
+
+@keyframes sideMove{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#inicio{cursor: pointer;}
+
+
 /*GALLERY*/
 
-.gallery{
-    width: 80vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-column-gap: 1vw;
-    grid-row-gap: 1vw;
-}
 
 .gallery img{
     background-color: grey;
@@ -160,8 +179,13 @@ a{
 }
 
 #gallery{
+    width: 80vw;
     margin: 10vh auto;
     max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
 }
 
 #gallery img{
@@ -171,16 +195,30 @@ a{
     transition: filter 0.5s, opacity 0.5s;
 }
 
-#wholeGallery, #galeryBackground{
+#galeryBackground{
     width: 100%;
     height: 100%;
     position: fixed;
+    overflow: hidden;
     top: 0;
-    z-index: 98;
+    left: 0;
 }
 
 #wholeGallery{
-    left: 35vw;
+    position: absolute;
+    margin: auto;
+}
+
+#onClickGallery{
+    position: fixed;
+    height: 1000px;
+    width: 1000px;
+    top: 65%;
+    left: 50%;
+    margin-top: -500px; 
+    margin-left: -500px; 
+    z-index: 98;
+    overflow: hidden;
 }
 
 #galeryBackground{
@@ -189,10 +227,6 @@ a{
     background-color: rgba(0, 0, 0, 0.767);
 }
 
-#wholeGallery img{
-    width: 70vw;
-    height: 70vh;
-}
 
 .appear{
     position: fixed;
@@ -222,7 +256,8 @@ a{
 /*FOOTER*/
 
 footer{
-    padding: 4vh 0;
+    position: relative;
+    padding: 4vh 0 7vh 0;
     background-color: var(--purple);
     width: 100%;
     color: white;
@@ -265,3 +300,16 @@ footer a{
     border-bottom: 2px solid grey;
     padding-bottom: 5px;
 }
+
+footer::after{
+    position: absolute;
+    bottom: -30px;
+    content: "made by: adria.peradalta@gmail.com   ||   © Monet's Brunch 2020";
+    width: 100%;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.8em;
+}
+

@@ -57,7 +57,9 @@ lang.addEventListener('click', ()=> {
 });
 // END CHANGE LANGUAGES
 
-
+// INICIO
+  $('#inicio').click(()=>{window.scrollTo(0,0)})
+// FIN INICIO
 
 // GALLERY + PRACTICING JQUERY :P
 
@@ -66,6 +68,10 @@ const appear = () =>{
   $('.gallery').attr('id', 'wholeGallery');
   $('.appear').css('display', 'block')
   $('.disappear').css('display', 'none')
+  $('.onClickGallery').attr('id', 'onClickGallery');
+  console.log(clickedOne)
+  width = -clickedOne*width;
+  $('#wholeGallery').css({left: `${width}px`});
 }
 
 const disappear = () =>{
@@ -73,45 +79,59 @@ const disappear = () =>{
     $('.gallery').attr('id', 'gallery');
     $('.appear').css('display', 'none');
     $('.disappear').css('display', 'block');
+    $('.onClickGallery').removeAttr('id');
+    width = 1000;
 }
 
-var width = 35,
-    moveWidth = 71,
-    maxWidth = (($("#gallery img").length-2)*moveWidth)/2;
+var width =  1000,
+    moveWidth =  1000,
+    count = 0,
+    galleryLength = $('.gallery img').length,
+    all = $('.gallery img'),
+    clickedOne;
 
-    console.log(width + " " + maxWidth);
-
+    console.log(galleryLength);
 
 // Right = dreta (width resta)
 // Left = esquerra (width suma)
 
 const moveLeft = () => {
-  width += moveWidth;
-  $('#wholeGallery').animate({
-    left: `${width}vw`
-  })
+  if(width < 0){
+    width += moveWidth;
+    $('#wholeGallery').animate({
+      left: `${width}px`
+    })
+  }
+  
 }
 
 const moveRight = () => {
   width -= moveWidth;
-  $('#wholeGallery').animate({
-    left: `${width}vw`
-  })
+  if(width*-1 < moveWidth*(galleryLength)){
+    $('#wholeGallery').animate({
+      left: `${width}px`
+    })
+  }
+  
 }
 
 $('.fa-close').click(()=> disappear());
 
 $('.fa-angle-left').click(function () {
-    if(width < maxWidth) moveLeft();
+    moveLeft();
 });
 
 $('.fa-angle-right').click(function () {
-  console.log(width + " " + maxWidth);
-  if(width > maxWidth - (maxWidth*2)) moveRight();
+    moveRight();
 });
 
 
 $('.appear').css('display', 'none');
+
+Array.from(all).forEach((v, i) => v.addEventListener('click', () => {
+  clickedOne = i;
+}));
+
 
 $('.gallery img').click(() => {
     appear();
@@ -123,37 +143,5 @@ document.addEventListener('keydown', function(event){
 	}
 });
 
-/*
-// on click img, show the big gallery
-$('.gallery img').click(e => {
-  let photo = e.target;
-  let photo2 = $(photo)[0].outerHTML;
-  
-  var gallery = `
-    <div id="wholeGallery">
-      <i class="fa fa-angle-left"></i>
-        ${photo2}
-      <i class="fa fa-angle-right"></i>
-    </div>
-  `;
-
-  $('#fullDisplay').html(gallery);
-});
-
-// array with all the imgs ready to input
-var fullGallery = $('.gallery img');
-var allThePhotos = [];
-
-for(let i = 0; i<fullGallery.length; i++){
-  allThePhotos.push(fullGallery[i].outerHTML);
-}
-
-console.log(allThePhotos);
-
-// on click show right or left pictures
-$('#wholeGallery i').click(() => {
-  console.log("hello lads");
-}); */
 
 
-// END GALLERY + PRACTICING JQUERY :P
