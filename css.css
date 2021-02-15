@@ -73,13 +73,13 @@ a{
 
 /* MAINPAGE*/
 
-#nosaltres{
+.nosaltres{
     max-width: 600px;
     text-align: center;
     margin: auto;
 }
 
-#description{
+.description{
     max-width: 600px;
     text-align: center;
     margin: 20px auto 60px auto;
@@ -311,5 +311,50 @@ footer::after{
     padding: 10px 0;
     text-align: center;
     font-size: 0.8em;
+}
+
+
+/* MENU HTML PAGE */
+
+#fullMenu{
+    width: 100%;
+    max-width: 1180px;
+    margin: auto; 
+}
+
+#fullMenu img{
+    width: 100%;
+}
+
+#downloadMenu{
+    position: fixed;
+
+    width: 50px;
+    height: 50px;
+    background-color:rgb(22, 22, 22);
+    border-radius: 50%;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#downloadMenu:hover{
+    color: rgb(22, 22, 22);
+    background-color: white;
+}
+
+#downloadMenu i {
+    margin-top: 14px;
+    color: white;
+    font-size: 20px;
+}
+
+#downloadMenu:hover > i{
+    color: rgb(22, 22, 22);
+}
+
+#body2{
+    background-color: rgb(22, 22, 22);
 }
 
