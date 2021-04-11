@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+
 // NAVBAR HIDE
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -143,5 +146,5 @@ document.addEventListener('keydown', function(event){
 	}
 });
 
-
+});
 
