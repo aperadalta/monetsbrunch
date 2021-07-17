@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&family=Roboto+Slab&display=swap');
+:root{
+    --purple: #352b46;
+    --yellow: #FBC32F;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+html{
+    width: 100%;
+}
+
+/* Header*/
+a{text-decoration: none;}
+.idiomes, nav, footer, .container, #checkMenu, #wholeGallery{   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header, nav{
+    background-color: var(--purple);
+    height: 5vh;
+    min-height: 50px;
+    border-bottom: 2px solid white;
+    color: white;
+    width: 100%;
+    justify-content: center;
+
+    a, p{
+        &:hover{
+            color: var(--yellow);
+        }
+    }
+}
+
+#lang{
+    position: fixed;
+    top: 0;
+    background-color: rgb(19, 18, 18);
+    color: white;
+    padding: 8px 6px;
+    border-radius: 0 0 6px 6px;
+    left: 80vw;
+    z-index: 5;
+    border: none;
+    cursor: pointer;
+    transition: top 0.3s;
+
+    &:hover{
+        color: var(--yellow);
+    }
+}
+
+header{
+    position: fixed;
+    top: 0;
+    font-size: 1.20rem;
+    transition: top 0.3s;
+}
+
+nav p{
+    margin: 0 3vw;
+    cursor: pointer;
+}
+
+nav:nth-child(2){
+    border: none;
+    min-height: 30px;
+}
+
+#navbar{
+    z-index: 3;
+}
+
+a{
+    color: white;
+    margin: 2vw;
+}
+
+/* MAINPAGE*/
+
+.nosaltres{
+    max-width: 900px;
+    text-align: center;
+    margin: auto;
+}
+
+.description{
+    max-width: 700px;
+    text-align: center;
+    margin: 20px auto 60px auto;
+}
+
+#mainPage{
+    height: 60vh;
+    width: 100%;
+    background-image: url("./fotos/tostadas.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    margin: 30vh 0 15vh 0;
+    position: relative;
+}
+
+#mainPage div{
+    height: 15vh;
+    width: 50vw;
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 25vw;
+    margin-top: -8vh;
+}
+
+#mainPage div img{ width: 100%;}
+
+.container{
+    margin: auto;
+    margin-bottom: 10vh;
+    width: 80vw;
+    height: 50%;
+    justify-content: center;
+
+    a{
+        font-style: italic;
+    }
+}
+
+.imgbg{
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+
+    i, h2{
+        &:hover{
+            color: var(--yellow);
+        }
+    }
+}
+
+.img{
+    width: 40%;
+    min-width: 350px;
+    height: 300px;
+    margin: 0 30px;
+}
+
+.text{
+    max-width: 350px;
+
+    a{
+        &:hover{
+            font-weight: 900;
+        }
+    }
+}
+
+.text h4{
+    margin-bottom: 5px;
+}
+
+#salados{background-image: url("./fotos/Gallery/Bagel.jpg");}
+#dulces{background-image: url("./fotos/Gallery/Tostas.jpg");}
+#tostas{background-image: url("./fotos/Gallery/laTerrazitaDeMonets.jpg");}
+#pancake{background-image: url("./fotos/Gallery/cocktel.jpg");}
+#checkMenu{background-image: url("./fotos/platazos.jpg"); cursor: pointer; background-attachment: fixed;}
+
+.container p{margin-bottom: 15px;}
+.container a{
+    color: black;
+    margin: 0;
+}
+
+
+
+@keyframes sideMove{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#inicio{cursor: pointer;}
+
+
+/*GALLERY*/
+
+
+.gallery img{
+    background-color: grey;
+    object-fit: cover;  
+}
+
+#gallery img:hover{
+    filter: blur(2px);
+    opacity: 0.7;
+}
+
+#gallery{
+    width: 80vw;
+    margin: 10vh auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+}
+
+
+#gallery img{
+    height: 200px;
+    width: 100%;
+    cursor: pointer;
+    transition: filter 0.5s, opacity 0.5s;
+}
+
+#galeryBackground{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+#wholeGallery{
+    position: absolute;
+    margin: auto;
+}
+
+#onClickGallery{
+    position: fixed;
+    height: 1000px;
+    width: 1000px;
+    top: 65%;
+    left: 50%;
+    margin-top: -500px; 
+    margin-left: -500px; 
+    z-index: 98;
+    overflow: hidden;
+}
+
+.fa-angle-right, .fa-angle-left, .fa-close{
+    &:hover{
+        color: var(--yellow);
+    }
+}
+
+#galeryBackground{
+    z-index: 95;
+    left: 0vw;
+    background-color: rgba(0, 0, 0, 0.767);
+}
+
+
+.appear{
+    position: fixed;
+    cursor: pointer;
+    color: white;
+    transform: scale(2);
+    z-index: 99;
+}
+
+.fa-angle-right{
+    top: 49vh;
+    right: 5vw;
+    transform: scale(4);
+}
+
+.fa-angle-left{
+    top: 49vh;
+    left: 5vw;
+    transform: scale(4);
+}
+
+.fa-close{
+    top: 5vh;
+    right: 15vw;
+}
+
+/*FOOTER*/
+
+footer{
+    position: relative;
+    padding: 4vh 0 7vh 0;
+    background-color: var(--purple);
+    width: 100%;
+    color: white;
+    font-weight: 50;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+footer div{
+    margin: auto;
+}
+
+footer h3{
+    margin-bottom: 7px;
+    color: var(--yellow);
+}
+
+footer *{
+    line-height: 150%;
+}
+
+footer a{
+    margin: 0 1vh 0 0;
+}
+
+
+@media only screen and (max-width: 600px){
+    #mainPage div{width: 70vw; margin-left: 15vw;}
+    #mainPage div img{ width: 150%;}
+    #dulces{margin-top: 5vh;}
+    .container, footer{flex-direction: column;}
+    .text{margin-top: 30px;}
+    footer div{margin: 2vh 0 0 10vw; font-size: 0.9rem}
+    #lang{left: 87vw}
+    .description{max-width: 80%;}
+    .imghide{display: none}
+}
+
+.bbot{
+    margin: auto;
+    width: 300px;
+    border-bottom: 2px solid grey;
+    padding-bottom: 5px;
+}
+
+footer::after{
+    position: absolute;
+    bottom: -30px;
+    content: "Made by: adria.peradalta@gmail.com | © Monet's Brunch 2020";
+    
+    width: 100%;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+
+/* MENU HTML PAGE */
+
+#fullMenu{
+    width: 100%;
+    max-width: 1180px;
+    margin: auto; 
+}
+
+#fullMenu img{
+    width: 100%;
+}
+
+#downloadMenu{
+    position: fixed;
+
+    width: 50px;
+    height: 50px;
+    background-color:rgb(22, 22, 22);
+    border-radius: 50%;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#downloadMenu:hover{
+    color: rgb(22, 22, 22);
+    background-color: white;
+}
+
+#downloadMenu i {
+    margin-top: 14px;
+    color: white;
+    font-size: 20px;
+}
+
+#downloadMenu:hover > i{
+    color: rgb(22, 22, 22);
+}
+
+#body2{
+    background-color: rgb(22, 22, 22);
+}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 1.20rem;
+}
