@@ -241,6 +241,8 @@ a {
   background-color: grey;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 1000px;
+  height: 750px;
 }
 
 #gallery img:hover {
